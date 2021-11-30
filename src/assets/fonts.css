@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Visby CF";
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+  src: local("Visby CF Heavy"), url("/fonts/VisbyCF-Heavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Visby CF";
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+  src: local("Visby CF ExtraBold"), url("/fonts/VisbyCF-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Visby CF";
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: local("Visby CF Bold"), url("/fonts/VisbyCF-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Visby CF";
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+  src: local("Visby CF DemiBold"), url("/fonts/VisbyCF-DemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Visby CF";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("Visby CF Medium"), url("/fonts/VisbyCF-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Visby CF";
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+  src: local("Visby CF Light"), url("/fonts/VisbyCF-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Visby CF";
+  font-weight: 100;
+  font-style: normal;
+  font-display: auto;
+  src: local("Visby CF Thin"), url("/fonts/VisbyCF-Thin.woff") format("woff");
+}
