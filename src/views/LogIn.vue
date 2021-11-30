@@ -7,7 +7,7 @@
       </div>
 
       <div class="user-credentials">
-        <form id="login-form" @submit.prevent="">
+        <form id="login-form" @submit.prevent="login">
           <input type="text" id="username" class="username mb-3" placeholder="Nombre de usuario">
           <div class="user-password mb-4">
             <input type="password" id="password" class="password" placeholder="Contraseña">
@@ -50,6 +50,17 @@
 <script>
 export default {
   name: "LogIn",
+  data() {
+    return {
+      username: "",
+      password: "",
+    }
+  },
+  methods: {
+    login(e) {
+      this.$router.push("/");
+    },
+  },
 };
 </script>
 

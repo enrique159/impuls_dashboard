@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.399" height="22.665" viewBox="0 0 20.399 22.665">
+  <g id="Icon_feather-user" data-name="Icon feather-user" transform="translate(-4.5 -3)">
+    <path id="Trazado_1" data-name="Trazado 1" d="M23.766,30.066a1.133,1.133,0,0,1-1.133-1.133V26.666a3.4,3.4,0,0,0-3.4-3.4H10.166a3.4,3.4,0,0,0-3.4,3.4v2.267a1.133,1.133,0,0,1-2.267,0V26.666A5.666,5.666,0,0,1,10.166,21h9.066A5.673,5.673,0,0,1,24.9,26.666v2.267A1.133,1.133,0,0,1,23.766,30.066Z" transform="translate(0 -4.401)" fill="#fff"/>
+    <path id="Trazado_2" data-name="Trazado 2" d="M16.166,3A5.666,5.666,0,1,1,10.5,8.666,5.673,5.673,0,0,1,16.166,3Zm0,9.066a3.4,3.4,0,1,0-3.4-3.4A3.4,3.4,0,0,0,16.166,12.066Z" transform="translate(-1.467)" fill="#fff"/>
+  </g>
+</svg>
