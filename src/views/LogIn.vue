@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     login(e) {
-      this.$router.push("/");
+      this.$router.push('/');
     },
   },
 };
