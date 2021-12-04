@@ -2,7 +2,7 @@
   <div class="container" :class="{ 'container-minimized': min }">
     <div class="head">
       <img src="@/assets/img/logo_white.png" alt="" class="logo" />
-      <button class="minimize-bar d-flex j-center a-center" @click="min = !min">
+      <button class="minimize-bar d-flex j-center a-center" @click="minimize()">
         <img src="@/assets/icons/arrow-left.svg" alt="" />
       </button>
     </div>
@@ -119,6 +119,10 @@ export default {
       this.options.catalogos = false;
       this.options.reportes = false;
       this.options[option] = true;
+    },
+    minimize() {
+      this.min = !this.min;
+      this.$store.state.minimized = this.min;
     },
   },
 };
