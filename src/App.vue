@@ -14,5 +14,6 @@
   font-family: 'Visby CF', Helvetica, Arial, system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 </style>
