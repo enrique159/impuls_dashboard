@@ -99,7 +99,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  width: 50%;
+  width: 49%;
   margin-top: 48px;
   // HEADR //////////////////////
   .header {

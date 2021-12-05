@@ -5,7 +5,7 @@
       <div class="middle-content">
         <PedidosChart/>
         <UsuariosActivosChart />
-        <UsuariosActivosChart />
+        <RegistroUsuariosChart />
       </div>
       <SalesGeneral />
     </div>
@@ -16,6 +16,7 @@
 import SideBarMenu from '@/components/SideBarMenu.vue'
 import PedidosChart from '@/components/charts/PedidosChart.vue'
 import UsuariosActivosChart from '@/components/charts/UsuariosActivosChart.vue'
+import RegistroUsuariosChart from '@/components/charts/RegistroUsuariosChart.vue'
 import SalesGeneral from '@/components/SalesGeneral.vue'
 export default {
   name: 'Home',
@@ -23,6 +24,7 @@ export default {
     SideBarMenu,
     PedidosChart,
     UsuariosActivosChart,
+    RegistroUsuariosChart,
     SalesGeneral
   },
   computed: {
