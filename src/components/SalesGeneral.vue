@@ -199,6 +199,7 @@ export default {
   position: relative;
   display: flex;
   padding: 24px;
+  padding-top: 48px;
   height: 100%;
   width: 30%;
 
@@ -386,7 +387,7 @@ export default {
     position: absolute;
     width: 180px;
     bottom: 12px;
-    left: 24px;
+    left: calc(50% - 90px);
     background-color: black;
     border-radius: 12px;
     border: none;

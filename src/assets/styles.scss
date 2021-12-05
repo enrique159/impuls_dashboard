@@ -12,8 +12,27 @@
     transition: 0.3s ease-in-out;
     display: flex;
     .middle-content {
+      box-sizing: border-box;
       height: 100%;
       width: 70%;
+      padding: 48px;
+      overflow-y: auto;
+      /* width */
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        width: 8px;
+        border-radius: 10px;
+      }
+      
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: rgb(185, 185, 185); 
+        border-radius: 10px;
+      }
     }
   }
   .content-min {
