@@ -1,8 +1,8 @@
 <template>
-  <div style="width: 100%;">
+  <div class="w-100">
     <div class="header">
       <div class="title">
-        <span>Pedidos</span>
+        <span>Ventas</span>
       </div>
       <div class="generals">
         <span class="daily-avg"
@@ -12,24 +12,10 @@
       </div>
       <DropdownButtonWhite />
     </div>
-    <div class="catalogo-pedidos mt-3">
-      <div
-        v-for="catalogo in catalogosVentas"
-        :key="catalogo.id"
-        class="sales-options"
-      >
-        <div
-          class="circle-option"
-          :style="'background-color:' + catalogo.color + ';'"
-        ></div>
-        <span>{{ catalogo.name }}</span>
-      </div>
-    </div>
     <apexchart
-      width="100%"
-      height="200"
       type="area"
-      :options="options"
+      height="200"
+      :options="chartOptions"
       :series="series"
     ></apexchart>
   </div>
@@ -38,55 +24,66 @@
 <script>
 import DropdownButtonWhite from "@/components/DropdownButtonWhite.vue";
 export default {
-  name: "PedidosChart",
+  name: "VentasChart",
   components: {
-    DropdownButtonWhite,
+    DropdownButtonWhite
   },
   data() {
     return {
-      catalogosVentas: [
+      series: [
         {
-          id: 1,
-          name: "Otoño Invierno 2021",
-          salesAnual: 110893.8,
-          pedidos: 360,
-          color: "#6AD9D9",
+          name: "Sales",
+          data: [
+            8548, 12467.1, 6652, 5021, 6240, 12485, 11620.04, 13856, 11658, 18156,
+            11496, 7896, 8695,
+          ],
         },
       ],
-      options: {
+      chartOptions: {
         chart: {
-          id: "vuechart-example",
+          type: "area",
           zoom: {
             enabled: false,
           },
         },
-        colors: ["#6AD9D9"],
-        fill: {
-          type: "solid",
-        },
+        colors: ["#5900ff"],
         dataLabels: {
           enabled: false,
+        },
+        stroke: {
+          curve: "straight",
         },
         xaxis: {
           type: "datetime",
           categories: [
             "01/01/2021 GMT",
+            "01/03/2021 GMT",
             "01/05/2021 GMT",
+            "01/07/2021 GMT",
             "01/10/2021 GMT",
+            "01/13/2021 GMT",
             "01/15/2021 GMT",
+            "01/17/2021 GMT",
             "01/20/2021 GMT",
+            "01/23/2021 GMT",
             "01/25/2021 GMT",
+            "01/27/2021 GMT",
             "01/30/2021 GMT",
           ],
         },
-      },
-      series: [
-        {
-          name: "series-1",
-          data: [44, 55, 41, 67, 22, 43, 60],
+        legend: {
+          horizontalAlign: "left",
         },
-      ],
+      },
     };
+  },
+  methods: {
+    formatMoney(total) {
+      return new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN",
+      }).format(total);
+    },
   },
   computed: {
     getDailyAverage() {
@@ -95,20 +92,23 @@ export default {
         this.series[0].data.reduce((acc, curr) => acc + curr, 0) /
         this.series[0].data.length;
       average = average.toFixed(2);
+      average = parseInt(average);
+      average = this.formatMoney(average);
       return average;
     },
     getTotal() {
       // get the total of the data series
       let total = this.series[0].data.reduce((acc, curr) => acc + curr, 0);
-      return total;
+      return this.formatMoney(total);
     },
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 // HEADR //////////////////////
 .header {
+  margin-top: 48px;
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   align-items: center;
@@ -135,26 +135,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
-}
-.catalogo-pedidos {
-  .sales-options {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    padding: 2px 12px;
-    .circle-option {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background-color: #68757c;
-    }
-    span {
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-left: 10px;
-    }
   }
 }
 </style>
